@@ -1,17 +1,18 @@
 package br.com.component.user.management.controller;
 
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import br.com.component.user.management.model.Company;
 
-@Controller
+@RestController
 public class CompanyController {
 		
-	@RequestMapping("/subcribeCompany")
-	public ResponseEntity<String> subscribecompany(@RequestBody Company Company) {
-		return ResponseEntity.ok("Company registered successfully!");
+	@PostMapping("/subcribeCompany")
+	public Company subscribecompany(@RequestBody Company Company) {
+		return Company;
 	}
 }

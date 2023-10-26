@@ -1,19 +1,32 @@
 package br.com.component.user.management.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Person {
+import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+@Entity
+public class Person implements Serializable{
+
+	private static final long serialVersionUID = 7737053682197321816L;
 	
-	private int IdPerson;
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private long IdPerson;
+	
 	private String namePerson;
 	private String surname;
 	private LocalDate birthDate;
 	private String email;
 	
-	public int getIdPerson() {
+	public long getIdPerson() {
 		return IdPerson;
 	}
-	public void setIdPerson(int idPerson) {
+	public void setIdPerson(long idPerson) {
 		IdPerson = idPerson;
 	}
 	public String getnamePerson() {
