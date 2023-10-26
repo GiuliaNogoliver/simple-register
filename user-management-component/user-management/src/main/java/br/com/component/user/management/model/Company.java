@@ -26,6 +26,5 @@ public class Company{
 	@Enumerated(EnumType.STRING)
 	@Column(name = "department")
 	private DepartmentEnum department;
-	
 
 }
