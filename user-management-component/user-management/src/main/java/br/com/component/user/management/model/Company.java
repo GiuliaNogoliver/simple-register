@@ -1,41 +1,31 @@
 package br.com.component.user.management.model;
 
-import java.io.Serializable;
-
-import org.springframework.data.annotation.Id;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+@Table(name = "company")
 @Entity
-public class Company implements Serializable{
+public class Company{
 	
-	private static final long serialVersionUID = 1L;
-
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
-	private long idCompany;
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long id;
 	
-	private String nameCompany;
+	@Column(name = "name")
+	private String name;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "department")
 	private DepartmentEnum department;
 	
-	public long getIdCompany() {
-		return idCompany;
-	}
-	public void setIdCompany(long idCompany) {
-		this.idCompany = idCompany;
-	}
-	public String getNameCompany() {
-		return nameCompany;
-	}
-	public void setNameCompany(String nameCompany) {
-		this.nameCompany = nameCompany;
-	}
-	public DepartmentEnum getDepartment() {
-		return department;
-	}
-	public void setDepartment(DepartmentEnum department) {
-		this.department = department;
-	}
+
 }
