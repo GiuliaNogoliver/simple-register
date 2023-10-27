@@ -1,4 +1,4 @@
-package br.com.user.management.service;
+package br.com.component.user.management.service;
 
 public class PersonService {
 

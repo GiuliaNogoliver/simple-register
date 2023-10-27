@@ -1,11 +1,11 @@
-package br.com.user.management.service;
+package br.com.component.user.management.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.component.user.management.model.Company;
-import br.com.user.management.repository.CompanyRepository;
+import br.com.component.user.management.repository.CompanyRepository;
 
 @Service
 public class CompanyServiceImpl implements CompanyService {

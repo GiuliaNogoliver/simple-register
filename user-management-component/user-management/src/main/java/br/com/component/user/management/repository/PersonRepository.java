@@ -1,4 +1,4 @@
-package br.com.user.management.repository;
+package br.com.component.user.management.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

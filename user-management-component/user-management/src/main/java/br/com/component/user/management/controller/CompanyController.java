@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.component.user.management.model.Company;
-import br.com.user.management.service.CompanyService;
+import br.com.component.user.management.service.CompanyService;
 
 @RestController
 @RequestMapping(value ="/")
